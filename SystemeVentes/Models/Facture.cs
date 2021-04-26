@@ -11,6 +11,6 @@ namespace SystemeVentes.Models
         public float Total { get; set; }
         public int NbItems { get; set; }
 
-        public List<Produit> Produits { get; set; }
+        public List<Product> Produits { get; set; }
     }
 }
