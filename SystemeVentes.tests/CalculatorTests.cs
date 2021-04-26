@@ -11,7 +11,7 @@ namespace SystemeVentes.tests
         public void CalculTPS_ShouldBe_Valid()
         {
             /// Arrange
-            var product = new Product
+            var product = new Product 
             {
                 SalePrice = 1.00M
             };
