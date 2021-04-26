@@ -9,12 +9,12 @@ namespace SystemeVentes.Services
     {
         public static decimal CalculTPS(Product prod)
         {
-            return prod.PrixVente;
+            return prod.SalePrice;
         }
 
         public static decimal CalculTVQ(Product prod)
         {
-            return prod.PrixVente;
+            return prod.SalePrice;
         }
     }
 }

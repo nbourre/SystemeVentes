@@ -7,7 +7,7 @@ namespace SystemeVentes.Services
 {
     public class ProduitData : IDataService<Product>
     {
-        private List<Product> produits;
+        private static List<Product> produits;
 
         public ProduitData()
         {   
@@ -16,6 +16,9 @@ namespace SystemeVentes.Services
 
         private void initData()
         {
+            /// Si les données sont déjà initialisées, ne pas la refaire
+            if (produits != null) return;
+
             produits = new List<Product>
             {
                 new Product() { UPC = "523438", Code = "TUE354", Name = "cubilia Curae; Donec tincidunt.", Description = "pede, nonummy ut, molestie in, tempus eu, ligula. Aenean", SalePrice = 10.45M },
