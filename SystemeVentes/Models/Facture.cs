@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace SystemeVentes.Models
@@ -8,8 +9,9 @@ namespace SystemeVentes.Models
     {
         public DateTime DateCreation { get; set; }
 
-        public float Total { get; set; }
-        public int NbItems { get; set; }
+        public Decimal Total => Produits.Sum(x => x.SalePrice);
+
+        public int NbItems => Produits.Count();
 
         public List<Product> Produits { get; set; }
     }
