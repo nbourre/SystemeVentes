@@ -132,7 +132,10 @@ namespace SystemeVentes.Services
 
         public IEnumerable<Product> GetAll()
         {
-            throw new NotImplementedException();
+            foreach (var prod in produits)
+            {
+                yield return prod;
+            }
         }
 
         public bool Insert(Product record)
