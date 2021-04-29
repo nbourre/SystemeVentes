@@ -18,7 +18,10 @@ namespace SystemeVentes.Services
 
         public static decimal CalculTVQ(Product prod)
         {
-            return prod.SalePrice;
+            if (prod == null) throw new ArgumentNullException("Product cannot be null");
+            if (!prod.TaxableProvincial) return 0.0M;
+
+            return prod.SalePrice * 0.09975M;
         }
     }
 }
