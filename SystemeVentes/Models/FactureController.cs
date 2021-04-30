@@ -14,5 +14,10 @@ namespace SystemeVentes.Models
             var fd = new FactureDetail(fact, prod, 1);
             fact.FactureDetails.Add(fd);
         }
+
+        public static void FactureRemoveProduct(Facture fact, Product prod)
+        {
+
+        }
     }
 }
