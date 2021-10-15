@@ -5,11 +5,11 @@ using SystemeVentes.Models;
 
 namespace SystemeVentes.Services
 {
-    public class ProduitData : IDataService<Product>
+    public class ProductDataService : IDataService<Product>
     {
         private static List<Product> produits;
 
-        public ProduitData()
+        public ProductDataService()
         {   
             initData();
         }

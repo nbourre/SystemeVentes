@@ -12,7 +12,7 @@ namespace SystemeVentes
         {
             InitializeComponent();
 
-            DataContext = new MainViewModel();
+            DataContext = new ProductViewModel();
         }
     }
 }
