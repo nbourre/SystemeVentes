@@ -7,7 +7,7 @@ namespace SystemeVentes.ViewModels
 {
     public class ProductViewModel : BaseViewModel
     {
-        ProductDataService productDataService = new ProductDataService();
+        IDataService<Product> dataService;
 
         private ObservableCollection<Product> products;
 
@@ -17,11 +17,13 @@ namespace SystemeVentes.ViewModels
             set { products = value; }
         }
 
-        public ProductViewModel()
+        public ProductViewModel(IDataService<Product> _productDataService)
         {
+            dataService = _productDataService;
+
             Products = 
                 new ObservableCollection<Product>
-                (productDataService.GetAll());
+                (dataService.GetAll());
         }
     }
 }
