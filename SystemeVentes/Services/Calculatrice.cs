@@ -9,12 +9,17 @@ namespace SystemeVentes.Services
     {
         public static decimal CalculTPS(Product prod)
         {
-            return prod.SalePrice;
+            return prod.SalePrice * 0.05M;
         }
 
         public static decimal CalculTVQ(Product prod)
         {
             return prod.SalePrice;
+        }
+
+        public static decimal CalculSoustotal(Product obj, double quantity)
+        {
+            return obj.SalePrice * (decimal)quantity;
         }
     }
 }
